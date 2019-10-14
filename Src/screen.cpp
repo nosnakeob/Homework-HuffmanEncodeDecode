@@ -1,4 +1,4 @@
-#include<iostream>
+/* #include<iostream>
 #include"screen.hpp"
 
 using namespace std;
@@ -37,4 +37,4 @@ bool Screen::option()
 	}
 
 	return 1;
-}
+} */

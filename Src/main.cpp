@@ -1,16 +1,17 @@
 #include <iostream>
-//#include "huffman.hpp"
+#include "huffman.hpp"
 using namespace std;
-
-inline void print()
-{
-	count << "�żٷż�" << endl;
-}
 
 
 int main(int argc, char* argv[])
 {
-	print();
+	/*Huffman huff;
+	huff.deCode();
+	huff.enCode();
+	system("pause");
+	*/
+
+	cout << "���������羰" << endl;
 
 	return 0;
 }

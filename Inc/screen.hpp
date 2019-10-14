@@ -1,4 +1,4 @@
-#ifndef _SCREEN_H_
+/* #ifndef _SCREEN_H_
 #define _SCREEN_H_
 
 class Screen
@@ -21,13 +21,5 @@ private:
 
 };
 
-Screen::Screen()
-{
-}
-
-Screen::~Screen()
-{
-}
-
-
 #endif // !_SCREEN_H_
+ */
