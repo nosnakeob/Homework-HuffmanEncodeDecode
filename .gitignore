@@ -11,5 +11,3 @@ CTestTestfile.cmake
 _deps
 
 test/
-build/
-out/
