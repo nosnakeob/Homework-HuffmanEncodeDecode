@@ -11,7 +11,7 @@ int main(int argc, char* argv[])
 	system("pause");
 	*/
 
-	cout << "���������羰" << endl;
+	cout << "" << endl;
 
 	return 0;
 }
