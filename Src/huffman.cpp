@@ -44,12 +44,16 @@ bool Huffman::init()
 	//读
 	TElemType e;
 
-	freopen("DataFile.data", "r", stdin);
+	if (!freopen("DataFile.data", "r", stdin))//文件不存在
+	{
+		return 0;
+	}
+
 
 	while (cin >> e)
 	{
 
-		if (loca.count(e)<=0)//该元素不存在
+		if (loca.count(e) <= 0)//该元素不存在
 		{
 			loca[e] = count + 1;//记录元素位置
 			HT[count + 1].elem = e;
@@ -59,7 +63,7 @@ bool Huffman::init()
 		HT[loca[e]].weight++;
 	}
 
-	if (count <= 0)
+	if (count <= 0)//文件为空
 	{
 		fclose(stdin);
 		return 0;
@@ -84,7 +88,10 @@ bool Huffman::init()
 
 bool Huffman::enCode()
 {
-	freopen("ToBeTran.data", "r", stdin);
+	if (!freopen("ToBeTran.data", "r", stdin))//文件不存在
+	{
+		return 0;
+	}
 	freopen("Code.txt", "w", stdout);
 
 	TElemType e;
@@ -124,7 +131,10 @@ bool Huffman::enCode()
 
 bool Huffman::deCode()
 {
-	freopen("CodeFile.data", "r", stdin);
+	if (!freopen("CodeFile.data", "r", stdin))//文件不存在
+	{
+		return 0;
+	}
 	freopen("Textfile.txt", "w", stdout);
 
 	int c, p = 0;//从根结点出发
@@ -142,17 +152,23 @@ bool Huffman::deCode()
 
 	}
 
+	fclose(stdin);
+	fclose(stdout);
 	return 1;
 }
 
 bool Huffman::output()
 {
+	if (freopen("ToBeTran.data", "r", stdin))
+	{
+		return 0;
+	}
+
 	for (int i = 1; i <= count; i++)
 	{
 		cout << HT[i].elem << HT[i].weight << endl;
 	}
 
-	freopen("ToBeTran.data", "r", stdin);
 
 	while (true)
 	{
